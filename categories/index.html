@@ -178,32 +178,43 @@ article header img {
   }
 }
 
-  nav a.active {
-  background-color: orange;
-  color: black;
-}
-a {
- color: orange;
- border-bottom: 1px solid orange;
-}
-a:hover {
- background-color: orange;
- color: black;
-}
-.dark h1 a:hover,
-.dark h2 a:hover,
-.dark h3 a:hover,
-.dark h4 a:hover,
-.dark h5 a:hover {
-  color: black
-}
-/* Override the bits of the dark theme that affect gists. */
-.gist table tbody td:first-child {
-  color: rgba(0,0,0,0.3) !important;
-}
-.gist table td, .dark table th {
-  border-color: #ccc !important;
-}
+  <style>
+    img {
+    max-width: 100%;
+    }
+
+    .light {
+    }
+
+    .light h2 a {
+    }
+
+    .light .muted {
+    color: rgba(0, 0, 0, 0.5);
+    }
+
+ nav a.active {
+     background-color: orange;
+     color: black;
+ }
+
+ a {
+     color: orange;
+     border-bottom: 1px solid orange;
+ }
+
+ a:hover {
+     background-color: orange;
+     color: black;
+ }
+ .dark h1 a:hover,
+ .dark h2 a:hover,
+ .dark h3 a:hover,
+ .dark h4 a:hover,
+ .dark h5 a:hover {
+     color: black
+ }
+</Style>
 
 </style>
 
@@ -215,7 +226,7 @@ a:hover {
 
   </head>
   
-  <body class="hack dark main container">
+  <body class="hack light main container">
     <header>
   
   <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -241,7 +252,7 @@ a:hover {
   </header>
   <ul>
     
-      <li><a href="git">git</a> (1)
+      <li><a href="git">git</a> (2)
     
   </ul>
 </main>

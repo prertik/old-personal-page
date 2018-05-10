@@ -4,9 +4,9 @@
     <meta name="generator" content="Hugo 0.39-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git: An Unexpected Journey | (recur code)</title>
-    <meta name="description" content="A gentle git introduction">
-    <meta name="keywords" content="Git, C, Shell, Open-source">
+    <title>Git Inside® Part I: Don&#39;t Fear the Rebase | (recur code)</title>
+    <meta name="description" content="This is a two part blog. This is Part I of II.">
+    <meta name="keywords" content="git, c, shell, rebase, merge">
     
     
     
@@ -16,18 +16,20 @@
   <meta name="author" content="Pratik Karki">
 
 
-    <meta property="og:title" content="Git: An Unexpected Journey" />
-<meta property="og:description" content="A gentle git introduction" />
+    <meta property="og:title" content="Git Inside® Part I: Don&#39;t Fear the Rebase" />
+<meta property="og:description" content="This is a two part blog. This is Part I of II." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://prertik.github.io/post/git-an-unexpected-journey/" />
+<meta property="og:url" content="https://prertik.github.io/post/git-inside/" />
 
-  <meta property="og:image" content="https://prertik.github.io/static/sanic.png" />
+  <meta property="og:image" content="https://prertik.github.io/static/tenor.gif" />
+
+  <meta property="og:image" content="https://prertik.github.io/static/applause.gif" />
 
 
 
-<meta property="article:published_time" content="2018-05-01T06:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-05-10T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-05-01T06:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-05-10T00:00:00&#43;00:00"/>
 
 
 
@@ -40,10 +42,10 @@
 
 
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://prertik.github.io/static/sanic.png"/>
+<meta name="twitter:image" content="https://prertik.github.io/static/tenor.gif"/>
 
-<meta name="twitter:title" content="Git: An Unexpected Journey"/>
-<meta name="twitter:description" content="A gentle git introduction"/>
+<meta name="twitter:title" content="Git Inside® Part I: Don&#39;t Fear the Rebase"/>
+<meta name="twitter:description" content="This is a two part blog. This is Part I of II."/>
 
     
 
@@ -62,10 +64,10 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-    <link rel="canonical" href="https://prertik.github.io/post/git-an-unexpected-journey/">
+    <link rel="canonical" href="https://prertik.github.io/post/git-inside/">
     
     
-      <link rel="next" href="https://prertik.github.io/post/git-inside/">
+      <link rel="next" href="">
     
     <link rel = "icon" sizes = "any" href ="/static/favicon.ico">
 
@@ -254,157 +256,52 @@ article header img {
     <main>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     
-<meta itemprop="name" content="Git: An Unexpected Journey">
-<meta itemprop="description" content="A gentle git introduction">
+<meta itemprop="name" content="Git Inside® Part I: Don&#39;t Fear the Rebase">
+<meta itemprop="description" content="This is a two part blog. This is Part I of II.">
 
 
-<meta itemprop="datePublished" content="2018-05-01T06:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-05-01T06:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1064">
+<meta itemprop="datePublished" content="2018-05-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1996">
 
-  <meta itemprop="image" content="https://prertik.github.io/static/sanic.png">
+  <meta itemprop="image" content="https://prertik.github.io/static/tenor.gif">
+
+  <meta itemprop="image" content="https://prertik.github.io/static/applause.gif">
 
 
 
-<meta itemprop="keywords" content="Git,C,Shell,Open-source," />
+<meta itemprop="keywords" content="git,c,shell,rebase,merge," />
 
     <header>
-      <h1 itemprop="headline">Git: An Unexpected Journey</h1>
+      <h1 itemprop="headline">Git Inside® Part I: Don&#39;t Fear the Rebase</h1>
       <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
-<span>5 minute read</span>
+<span>10 minute read</span>
 <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2018-05-01T06:00:00&#43;00:00">1 May, 2018</time>
+  Published: <time datetime="2018-05-10T00:00:00&#43;00:00">10 May, 2018</time>
 
 </p>
     </header>
     
-      <blockquote itemprop="description">A gentle git introduction</blockquote>
+      <blockquote itemprop="description">This is a two part blog. This is Part I of II.</blockquote>
     
     
 
     <div itemprop="articleBody">
       
 
-<p>This summer of &lsquo;18, I&rsquo;ll be working in Git. Git is an insanely
-awesome software. I still remember the day I learned about Git via
-Github and instantly got hooked. Git isn&rsquo;t just an everyday software
-you encounter, just look at the documentation and observe closely
-how it works and you will understand the rock solid design.
-Enough with Git introduction already. There are <em>too</em> <em>much</em> posts
-describing Git already.</p>
+<p>Ok, you&rsquo;ve read my previous Git blog. There were nice feedback in the <a href="https://public-inbox.org/git/CAH5451mJO3Bgg9DST57fqcGGU-SPrcSECjXi0qOqeKsW0uaRzg@mail.gmail.com/">mailing list</a> and in emails and IRC. This week I did a close study on <code>git-rebase.</code>
+There are _a_lot_of_posts_ about <a href="https://git-scm.com/docs/git-rebase"><code>git-rebase</code></a> which talk of benefits of rebase and some are negative towards rebase.
+By convention, it is understood that <code>rebase</code> is harder to understand for beginners that&rsquo;s why most will prefer merging. Even Github has merging of pull requests by default and to do rebase and merge you&rsquo;ll have to select it from the drop-down menu in the pull-requests section.</p>
 
-<h2 id="sending-patches">Sending Patches</h2>
+<p>Don&rsquo;t be afraid of rebase and after reading this think of all the things you could have done if you had known rebase.</p>
 
-<p>Rather than going to the theory of Git, lets learn how to send patch
-to Git. Sending patches to Git is different than sending patches to
-other JS Frameworks, Game Engines, etc. You don&rsquo;t use Github to send
-patches to Git. <a href="https://github.com/git/git/blob/master/Documentation/SubmittingPatches">Documentation/SubmittingPatches</a>
-already contains a great deal of information for anybody to learn
-how to send patch.
-But, let me summarize it.</p>
-
-<p>Ok, you&rsquo;ve modified some code. You check it and believe it doesn&rsquo;t break
-anything else. You run tests on it. It looks good. You follow the
-standard C writing guideline. So, you decide to send it.
-First you must do is fire up terminal and run <code>git diff --check</code>.
-If you don&rsquo;t see anything there, it&rsquo;s good you have not introduced
-whitespaces in your code. But, if you do see codes there fix
-those whitespaces. Git community is picky about whitespaces.</p>
-
-<p>Now, is the right time to run some tests. Always remember to test your
-changes. Running test suite provided in Git is the most preferred but
-if your change introduces something new, you can write a new test.
-There are two kinds of tests you can do:</p>
-
-<ul>
-<li><p>Functional tests: These are the core Git tests. These test scripts
-are mandatory to be run for changes and test must pass to introduce
-new patch. The easiest way to run all the tests is navigate to <code>/t</code>
-directory and run <code>make</code>. Another way is to run with any <a href="https://testanything.org/">TAP harness</a>.
-You can parallel test by using prove.
-<code>$ prove --timer --jobs 15 ./t[0-9]*.sh</code>
-You can also run single test by running the shell script with a name
-like <code>tNNNN-descriptor.sh</code>. If new functionality is added by you then
-unit tests need to be created by creating helper commands which have
-limited action. Keep these in <code>t/helpers</code>. To add helper add a line to
-<code>t/Makefile</code> and to <code>.gitignore</code> for the binary file you added. The Git
-community prefers functional tests using the full git executable, so try
-to exercise your new code using git commands before creating a test helper.
-To find out why a test failed, repeat the test with the -x -v -d -i options
-and then navigate to the appropriate &ldquo;trash&rdquo; directory to see the data shape
-that was used for the test failed step. More information can be found in <a href="https://github.com/git/git/blob/master/t/README">t/README</a></p></li>
-
-<li><p>Performance tests: If your changes improve performance or if your patch
-can affect performance, you need to run the tests in <code>t/perf</code>. To check the
-change in performance use <code>t/perf/run</code> script.
-More information about performance tests can be found in this awesome guideline
-written in Git for Windows <a href="https://github.com/git-for-windows/git/blob/master/CONTRIBUTING.md#performance-tests">Contributing document</a>
-which is applicable for both Linux and Windows.</p></li>
-</ul>
-
-<p>Then run <code>git log &lt;file you modified&gt;</code> and see all the changes you made.
-Now, think of good commit message. This is very important as it
-describes the maintainers what you are fixing. Write the first line
-of the commit message with a short description of about 50 characters.
-Also, prefix is needed for the first line like:
-<code>test: avoid pipes in git related commands for test</code>
-Now, in after the short description, you should write a lengthier
-commit message describing the changes you made. The commit message
-should be in imperative mood. e.g. &ldquo;avoid using pipes &hellip;&rdquo;.
-This should be very descriptive and very clear of what you&rsquo;ve done.
-Also, remember to sign-off your patch. Run <code>git commit &lt;files&gt; -s</code>.</p>
-
-<p>Now, time to generate your patch. Git has a tool for generating patches.
-Cool, right? Run <code>git format-patch HEAD~</code> to generate a single patch
-for your changes. If your change is of only a single type i.e. change
-in typo in different files then, only generate a single file. But, if
-your changes are in different files of different nature then, run
-<code>git format-patch HEAD~&lt;number of commits to convert to patches&gt;</code>.
-Remember you&rsquo;ll need multiple commits if you&rsquo;ve changed multiple files
-differently e.g. you changed a test file for typo and <code>git-rebase.sh</code>
-to add some extra functionalities, then you have to write two commit
-messages describing both changes.
-Now, a patch file or multiple patch files will be generated depending
-on your changes. You can apply this patchfile by running <code>git am &lt;patchfile&gt;</code>.</p>
-
-<p>Now, time to send to patch to the mailing list. Git has a tool for this
-too. Run <code>git send-email &lt;your-patch-file&gt;</code>. Now, to use send-email, you need
-to set up your mailing id and format message with the mail. This should be
-in plain text. Follow <a href="https://git-scm.com/docs/git-send-email">git send-email documentation</a>
-closely. This explains everything in much more detail.
-Your patch now, goes through lot of review process. Follow closely,
-discuss with the community, understand and acknowledge their comments.
-Write quality codes rather than large quantity.</p>
-
-<h2 id="gsoc-18">GSoC &lsquo;18</h2>
-
-<p>So, in this GSoC timeline. I&rsquo;ll be working to make <code>git rebase</code> a builtin.
-i.e. <code>git rebase</code> is previously written in shell scripts. My job is to convert
-it into C.
-Why is this necessary one might ask.
-Well, Many components of Git are still in the form of shell and Perl scripts.
-This has certain advantages of being extensible but causes problems in production
-code on multiple platforms like Windows. I&rsquo;m going to rewrite a couple of shell
-and perl scripts into portable and performant C code, making them built-ins.
-The major advantage of doing this is improvement in efficiency and performance.</p>
-
-<p>So, what does rebase do?
-There&rsquo;s a cool beginner friendly introduction to rebase <a href="https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had">here</a>
-Or, you can follow, <a href="https://git-scm.com/docs/git-rebase">git-rebase documentation</a>.
-I&rsquo;m not going to explain again here as it is already done in a much
-better way in both the git documentation and the post.
-Now, this is just a beginning post. I will be updating and keeping
-a series of what I learn from Git. I will be writing every week.
-This will be a great journey.</p>
-
-<p>Ah, nearly forgot to mention. If all of our patches in GSoC &lsquo;18 gets
-merged into Git. Git will be fast. How fast you might ask? Time will tell.</p>
+<p>After understanding the power of rebase and use it to make your branches more cleaner and linear. You will be the cool one.</p>
 
 
 
@@ -420,11 +317,261 @@ merged into Git. Git will be fast. How fast you might ask? Time will tell.</p>
 <figure>
   
     
-      <img class="lazyload" data-src="/static/sanic.png"  />
+      <img class="lazyload" data-src="/static/tenor.gif"  />
     
   
   
 </figure>
+
+<p>Ok, let&rsquo;s de-structure <code>git-rebase</code>. The general idea of rebase is that it is used to reapply commits on top of another base tip.
+Suppose, you&rsquo;re working on a tech company which has many Engineers and you&rsquo;re choice of DVCS is Git. Now, to introduce new features, the developers will work in their own feature branch which has to be someday merged or rebased into the master.</p>
+
+<p>Suppose, the structure of the branch is:</p>
+
+<pre><code class="language-ascii">M0---M1---M2 master
+  \
+   \
+    \
+     B1---B2 feature
+</code></pre>
+
+<p>Now, you&rsquo;re base branch is M0 and the developers based their feature branch B1 on it. But, since there is always development going on a tech company. The master branch gradually develops to M1 and M2. While the base branch also gradually develops to B2. The developers will find certain aspects have changed in the code base and they need to keep up with the master branch.
+Hence they will do,</p>
+
+<pre><code class="language-git">git rebase master
+git rebase master feature
+</code></pre>
+
+<p>The structure of the branch now changes to:</p>
+
+<pre><code class="language-ascii">M0---M1---M2 master
+           \
+            \
+             \
+              B1'---B2' feature
+</code></pre>
+
+<p>Now, life goes on, hence, more development happens on. Assume the structure after some time:</p>
+
+<pre><code class="language-ascii">M0---M1---M2---M3---B3'---M4---M5---M6---M7 master
+           \
+            \
+             \
+              B1'---B2'---B3---B4---B5 feature
+</code></pre>
+
+<p>Now, again the developers will rebase. But, this time let&rsquo;s assume feature B3 was crucial for master and was already sent a patch via mail and it has been present there. While rebasing it will be automatically skipped.
+The new structure becomes:</p>
+
+<pre><code class="language-ascii">M0---M1---M2---M3---B3'---M4---M5---M6---M7 master
+                                          \
+                                           \
+                                            \
+                                             B1'---B2'---B4'---B5' feature
+</code></pre>
+
+<p>As you can see rebase creates a much more linear structure. This creates a neat and clean patch series which is easy for reviewer to review. The patches sent are all on the current state of master and is optimized for reviewing.</p>
+
+<p>If you had do the same process but merging at each step instead of rebasing i.e. doing repeated merges. The structures would roughly become:</p>
+
+<pre><code class="language-ascii">M0---M1---M2------M3---M4---M5---M6---M7
+ \         \       \                   \
+  \         \       \                   \
+   \         \       \                   \
+    B1---B2---C1--B3--C2---B4---B5--------C3
+</code></pre>
+
+<p>C1, C2, C3 denote the merge with additional merge commits that are done for every merge. This is quite difficult for reviewer to check as multiple changes are tested in the master brought by multiple changes. All the changes must be understood by reviewer and hence, must analyze the older version of master to analyze the changes brought by the new branches.</p>
+
+<p>The information on merge remain as-is. But, the history of rebase gets omitted in the process. I do not imply that the commits are lost but the useful record which might show how the rebased patches are related to original patches are not present.</p>
+
+<p>Another important thing that can be done via rebase is we can transplant a branch based on one branch to another branch. This is done via <code>rebase --onto</code>.</p>
+
+<p>Let&rsquo;s assume, you&rsquo;re working on a mobile app project. You have a basic login phase for the app. A team is working on an experimental branch to introduce new cool features. You fork the experimental branch to make login cooler by adding facial recognition login rather than just plain login.
+The structure might look like this:</p>
+
+<pre><code class="language-ascii">o---o---o---o---o---o  master
+     \
+      o---o---o---o---o  experimental
+                       \
+                        o---o---o  facial_recognition
+</code></pre>
+
+<p>Now, your team working on facial recognition make a breakthrough and the functionality is ready for production but, unluckily many works in experimental branch is still a work in process. So, what do you do in this situation?
+Well, <code>git rebase</code> has magical voodoo to handle this situation.
+You do</p>
+
+<pre><code class="language-git">git rebase --onto master experimental facial_recognition
+</code></pre>
+
+<p>If there are no conflicts. This will handle the task perfectly and the structure now looks something like this:</p>
+
+<pre><code class="language-ascii">o---o---o---o---o---o---o  master
+    |                     \
+    |                      o'---o'---o' facial_recognition
+     \
+      o---o---o---o---o  experimental
+</code></pre>
+
+<p>This is what you wanted. Cool, right?</p>
+
+<p>What if there were conflicts. Well, rebase will stop at first conflicting commit and leave commit markers in the tree. Use <code>git diff</code> and locate <code>&lt;&lt;&lt;&lt;&lt;&lt;</code> markers to find the problem.
+After editing the conflicting files do</p>
+
+<pre><code class="language-git">git add &lt;filename&gt;
+</code></pre>
+
+<p>If the conflict is resolved then, do</p>
+
+<pre><code class="language-git">git rebase --continue
+</code></pre>
+
+<p>To undo the git rebase</p>
+
+<pre><code class="language-git">git rebase --abort
+</code></pre>
+
+<p>Much more configurations and options are available for rebase. Do checkout the git-rebase <a href="https://git-scm.com/docs/git-rebase">docs</a>.</p>
+
+<h2 id="interactive-rebase">Interactive rebase</h2>
+
+<p>Now, onward to another awesome rebase option <code>rebase  -i</code> which is generally said as &ldquo;Interactive rebase mode&rdquo;. With interactive mode, you can edit the commits which are rebased, re-order the commits and remove them if unwanted or bad patches.</p>
+
+<p>Interactive mode is preferable to use for the following workflow:</p>
+
+<pre><code class="language-ascii">1. you have a wonderful idea
+2. you want to hack the code and you do
+3. prepare a series for submission
+4. submit
+</code></pre>
+
+<p>Interactive rebase can be more powerful than automatic rebase in certain scenarios as it can be used to alter commits as they are moved to new branch and offers complete control over the branch&rsquo;s commit history. It will help to clean up a messy history before merging a feature into master.</p>
+
+<p>An example of interactive rebase:</p>
+
+<pre><code class="language-git">git checkout experimental
+git rebase -i master
+</code></pre>
+
+<p>This will open the editor of your choice. Mine is Emacs. The editor will show listings of all the commits:</p>
+
+<pre><code class="language-git">pick 44d5c7a Message for commit #1
+pick ******* Message for commit #2
+</code></pre>
+
+<p>Now can you change the pick command or reorder the entries to modify the branch&rsquo;s history.
+Alternatively, you can merge two commits as a single commit if they portray the same message for similar change. This can be done via</p>
+
+<pre><code class="language-git">git commit --fixup &lt;commit&gt;
+</code></pre>
+
+<p>After saving and closing the file, Git will perform the rebase according to your instructions and you&rsquo;re the incharge in interactive mode while rebase handles automatically for you. This is a unique feature.</p>
+
+<p>You can also split commits using interactive mode. You can add commits or split a commit into two.
+To do this do the following:</p>
+
+<ol>
+<li><p>Do</p>
+
+<pre><code class="language-git">git rebase -i &lt;commit&gt;^
+</code></pre>
+
+<p>where the <code>&lt;commit&gt;</code> is the commit you want to split.</p></li>
+
+<li><p>Mark the commit with action &ldquo;edit&rdquo;.</p></li>
+
+<li><p>Execute</p>
+
+<pre><code class="language-git">git reset HEAD^
+</code></pre></li>
+
+<li><p>Now add changes to the index that you want to have as first commit and do</p>
+
+<pre><code class="language-git">git add -i or git gui
+</code></pre></li>
+
+<li><p>Commit the now-current index.</p></li>
+
+<li><p>Repeat 4 and 5 until the working tree is clean.</p></li>
+
+<li><p>Continue rebase with</p>
+
+<pre><code class="language-git">git rebase --continue
+</code></pre></li>
+</ol>
+
+<p>There is also an important case where you need to recover from upstream rebase. The rebase <a href="https://git-scm.com/docs/git-rebase#_recovering_from_upstream_rebase">doc</a> details nicely and enough for understanding it. Don&rsquo;t miss it.</p>
+
+<p>There are people&rsquo;s different opinions regarding rebase and merge. People claim one is better than the other. But, rather than claiming superiority of one over another and creating another flame war, we must embrace both as both are very important for varying situations. The amazing thing about Git is it doesn&rsquo;t force one more over another. It does what the maintainer prefers. So, using over another is a matter of taste and may be due to certain cases but, claiming never to use one and always use another one because it is better is doing un-justice to the tooling and missing out on a great tool.</p>
+
+<p>With that said, let&rsquo;s look onto the scenarios where you can use Rebase or the cases for using Rebasing.</p>
+
+<ol>
+<li><p>Never use rebase on public branches.
+Never rebase the master branch onto your feature branch. Since, this will only trigger change in your repository and everyone will be working on original master. You will need to synchronize your master branch with the original one i.e. merge them back together because your master branch history has diverged from everybody else&rsquo;s. You will need two sets of commits that does the same change to fix and can be very confusing. So, think carefully before running <code>git rebase</code>.</p></li>
+
+<li><p>Be careful or omit &ndash;force flag in pushing a rebased master branch into remote repository.
+Only use &ndash;force flag if you know what you&rsquo;re doing. The conflict messages are there to help you find the errors. One of the only times you might need to force-push is when you&rsquo;ve performed a local cleanup after you&rsquo;ve pushed a private feature branch to a remote repository.</p></li>
+</ol>
+
+<h2 id="best-cases-for-rebase-use">Best cases for Rebase use:</h2>
+
+<ol>
+<li><p>In a local cleanup. By using interactive rebase and coding you can make sure each commit in your feature is focused and meaningful. Introducing <code>git-rebase</code> into your workflow affects local branches and other developers only can see your finished product which is clean and has easier to understand branch history. But, this is only applicable for private branches.</p></li>
+
+<li><p>Integrating an approved feature. If a new feature is approved by your team, you can rebase the feature onto the tip of the master branch before merging the feature onto the main code. If you rebase before the merge, the merge will be fast-forwarded and will result in a perfectly linear history. This also helps to squash any follow-up commits added during a pull request.</p></li>
+
+<li><p>After making a pull request, you mustn&rsquo;t do <code>git rebase</code> as it becomes a public branch for others to review the code. Hence, before submitting the pull request/s, it is better to use interactive rebase to clean up the code.</p></li>
+</ol>
+
+<p>There is another important flag <code>-p</code> or <code>--preserve-merges</code> which you can use with rebase.<code>--preserve merges</code> will recreate merge commits instead of flattening the history. It will replay commits a merge commit introduces. The merge conflict resolutions are not preserved. <code>--preserve merges</code> uses <code>--interactive</code> internally and combining it with <code>--interactive</code> option while rebasing can trigger a bug present which can produce dubious results when re-ordering the commits. The bug detail can be found <a href="https://git-scm.com/docs/git-rebase#_bugs">here</a>.</p>
+
+<p>All in all both merging and rebasing are equally important. Rebase is an awesome tool we&rsquo;re lucky to have in our toolbox. Some might complain that they had to bisect through several hundred commits to track down the bug which was introduced due to a faulty rebase. To prevent these problems, one of my mentor during this GSoC, <a href="https://twitter.com/christiancouder">Christian Couder</a> <a href="http://colabti.org/irclogger/irclogger_log/git-devel?date=2018-05-06">pointed</a> out that using <code>git rebase --exec make master</code> it&rsquo;s possible to check that each commit from master to the tip of the current branch builds. So, rebase can help people check that rebase did not introduce bugs. He also pointed out that using rebase with <code>--exec</code>, we can run tests for each commit while using rebase.</p>
+
+<p>It&rsquo;s all about tastes of developers. But, having and using the rebase tool present in our Git toolbox can simplify many tasks and is perfectly suited for certain cases.</p>
+
+<p>This post was about the philosophy and general idea behind &ldquo;rebase&rdquo; and the follow-up post will be of breaking down of the current script file of <code>git-rebase.sh</code> and show how that can be made a built-in.</p>
+
+<p>With this my research phase is done and will now start implementing changes. You can find me in <code># git-devel</code> as &ldquo;prertik&rdquo;.</p>
+
+<p>Shout out to all the awesome developers behind Git.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+  
+    
+      <img class="lazyload" data-src="/static/applause.gif"  />
+    
+  
+  
+</figure>
+
+<p>Thanks to <a href="https://twitter.com/christiancouder">Christian Couder</a> and <a href="https://twitter.com/jschindelin">Johannes Schindelin</a> for helping me research on git-rebase.</p>
+
+<p><a href="https://blog.pa1ch.fr/posts/2018/05/05/en/gsoc2018-week-1.html">Alban Gruin</a> is working on converting interactive rebase to C and <a href="https://ungps.github.io">Paul-Sebastian Ungureanu</a> is working on converting <code>git stash</code> to built-in during this GSoC. Do check out their blogs.</p>
+
+<h2 id="references">References</h2>
+
+<p>Thanks to Christian for pointing me out the awesome blogs by <a href="http://softwareswirl.blogspot.com/2009/08/rebase-with-history-implementation.html">Michael Haggerty</a> who is committer on Git and has written an awesome tool <a href="http://softwareswirl.blogspot.fr/2013/05/git-imerge-practical-introduction.html">git-imerge</a> which introduce some awesome ideas.</p>
+
+<p>_a_lot_of_posts_regarding_rebase_:</p>
+
+<ul>
+<li>(<a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">https://www.atlassian.com/git/tutorials/merging-vs-rebasing</a>)</li>
+<li>(<a href="https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1">https://medium.com/@fredrikmorken/why-you-should-stop-using-git-rebase-5552bee4fed1</a>)</li>
+<li>(<a href="https://nathanleclaire.com/blog/2014/09/14/dont-be-scared-of-git-rebase/">https://nathanleclaire.com/blog/2014/09/14/dont-be-scared-of-git-rebase/</a>)</li>
+<li>(<a href="https://www.derekgourlay.com/blog/git-when-to-merge-vs-when-to-rebase/">https://www.derekgourlay.com/blog/git-when-to-merge-vs-when-to-rebase/</a>)</li>
+</ul>
 
     </div>
     
@@ -460,16 +607,16 @@ merged into Git. Git will be fast. How fast you might ask? Time will tell.</p>
       by <span itemprop="author">Pratik Karki</span>
     
   
-  <time itemprop="datePublished" datetime="2018-05-01T06:00:00&#43;00:00">
-    1 May, 2018
+  <time itemprop="datePublished" datetime="2018-05-10T00:00:00&#43;00:00">
+    10 May, 2018
   </time>
   
     in <span itemprop="articleSection"><a href="/categories/git/">git</a></span>
   
   
-    and tagged <a href="/tags/c/">C</a>, <a href="/tags/git/">Git</a>, <a href="/tags/open-source/">Open-source</a> and <a href="/tags/shell/">Shell</a>
+    and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a>, <a href="/tags/merge/">merge</a>, <a href="/tags/rebase/">rebase</a> and <a href="/tags/shell/">shell</a>
   
-  using <span itemprop="wordCount">1064</span> words.
+  using <span itemprop="wordCount">1996</span> words.
 </p>
 
       

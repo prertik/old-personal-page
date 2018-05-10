@@ -23,7 +23,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-05-01T06:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-05-10T00:00:00&#43;00:00"/>
 
 
 
@@ -182,32 +182,43 @@ article header img {
   }
 }
 
-  nav a.active {
-  background-color: orange;
-  color: black;
-}
-a {
- color: orange;
- border-bottom: 1px solid orange;
-}
-a:hover {
- background-color: orange;
- color: black;
-}
-.dark h1 a:hover,
-.dark h2 a:hover,
-.dark h3 a:hover,
-.dark h4 a:hover,
-.dark h5 a:hover {
-  color: black
-}
-/* Override the bits of the dark theme that affect gists. */
-.gist table tbody td:first-child {
-  color: rgba(0,0,0,0.3) !important;
-}
-.gist table td, .dark table th {
-  border-color: #ccc !important;
-}
+  <style>
+    img {
+    max-width: 100%;
+    }
+
+    .light {
+    }
+
+    .light h2 a {
+    }
+
+    .light .muted {
+    color: rgba(0, 0, 0, 0.5);
+    }
+
+ nav a.active {
+     background-color: orange;
+     color: black;
+ }
+
+ a {
+     color: orange;
+     border-bottom: 1px solid orange;
+ }
+
+ a:hover {
+     background-color: orange;
+     color: black;
+ }
+ .dark h1 a:hover,
+ .dark h2 a:hover,
+ .dark h3 a:hover,
+ .dark h4 a:hover,
+ .dark h5 a:hover {
+     color: black
+ }
+</Style>
 
 </style>
 
@@ -219,7 +230,7 @@ a:hover {
 
   </head>
   
-  <body class="hack dark main container">
+  <body class="hack light main container">
     <header>
   
   <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -247,6 +258,44 @@ a:hover {
     <article itemscope itemtype="http://schema.org/CreativeWork">
   <header>
     <h2 itemprop="name">
+      <a href="/post/git-inside/">Git Inside® Part I: Don&#39;t Fear the Rebase</a>
+    </h2>
+    
+      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>10 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Published: <time datetime="2018-05-10T00:00:00&#43;00:00">10 May, 2018</time>
+
+</p>
+    
+  </header>
+  
+    <blockquote itemprop="headline">This is a two part blog. This is Part I of II.</blockquote>
+  
+  <div itemprop="description">
+    Ok, you&rsquo;ve read my previous Git blog. There were nice feedback in the mailing list and in emails and IRC. This week I did a close study on git-rebase. There are _a_lot_of_posts_ about git-rebase which talk of benefits of rebase and some are negative towards rebase. By convention, it is understood that rebase is harder to understand for beginners that&rsquo;s why most will prefer merging. Even Github has merging of pull requests by default and to do rebase and merge you&rsquo;ll have to select it from the drop-down menu in the pull-requests section.
+  </div>
+  
+    <nav class="readmore"><a itemprop="url" href="/post/git-inside/">Read More&nbsp;&raquo;</a></nav>
+  
+  <meta itemprop="inLanguage" content="en-us">
+  <meta itemprop="datePublished" content="2018-05-10T00:00:00&#43;00:00">
+  <meta itemprop="dateModified" content="2018-05-10T00:00:00&#43;00:00">
+  
+    <meta itemprop="image" content="https://prertik.github.io/static/tenor.gif">
+  
+</article>
+
+  
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
       <a href="/post/git-an-unexpected-journey/">Git: An Unexpected Journey</a>
     </h2>
     
@@ -264,6 +313,8 @@ a:hover {
 </p>
     
   </header>
+  
+    <blockquote itemprop="headline">A gentle git introduction</blockquote>
   
   <div itemprop="description">
     This summer of &lsquo;18, I&rsquo;ll be working in Git. Git is an insanely awesome software. I still remember the day I learned about Git via Github and instantly got hooked. Git isn&rsquo;t just an everyday software you encounter, just look at the documentation and observe closely how it works and you will understand the rock solid design. Enough with Git introduction already. There are too much posts describing Git already.

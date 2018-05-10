@@ -178,32 +178,43 @@ article header img {
   }
 }
 
-  nav a.active {
-  background-color: orange;
-  color: black;
-}
-a {
- color: orange;
- border-bottom: 1px solid orange;
-}
-a:hover {
- background-color: orange;
- color: black;
-}
-.dark h1 a:hover,
-.dark h2 a:hover,
-.dark h3 a:hover,
-.dark h4 a:hover,
-.dark h5 a:hover {
-  color: black
-}
-/* Override the bits of the dark theme that affect gists. */
-.gist table tbody td:first-child {
-  color: rgba(0,0,0,0.3) !important;
-}
-.gist table td, .dark table th {
-  border-color: #ccc !important;
-}
+  <style>
+    img {
+    max-width: 100%;
+    }
+
+    .light {
+    }
+
+    .light h2 a {
+    }
+
+    .light .muted {
+    color: rgba(0, 0, 0, 0.5);
+    }
+
+ nav a.active {
+     background-color: orange;
+     color: black;
+ }
+
+ a {
+     color: orange;
+     border-bottom: 1px solid orange;
+ }
+
+ a:hover {
+     background-color: orange;
+     color: black;
+ }
+ .dark h1 a:hover,
+ .dark h2 a:hover,
+ .dark h3 a:hover,
+ .dark h4 a:hover,
+ .dark h5 a:hover {
+     color: black
+ }
+</Style>
 
 </style>
 
@@ -215,7 +226,7 @@ a:hover {
 
   </head>
   
-  <body class="hack dark main container">
+  <body class="hack light main container">
     <header>
   
   <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
@@ -260,6 +271,8 @@ a:hover {
 </p>
     
   </header>
+  
+    <blockquote itemprop="headline">A gentle git introduction</blockquote>
   
   <div itemprop="description">
     This summer of &lsquo;18, I&rsquo;ll be working in Git. Git is an insanely awesome software. I still remember the day I learned about Git via Github and instantly got hooked. Git isn&rsquo;t just an everyday software you encounter, just look at the documentation and observe closely how it works and you will understand the rock solid design. Enough with Git introduction already. There are too much posts describing Git already.
