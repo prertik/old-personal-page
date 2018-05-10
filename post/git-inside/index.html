@@ -260,7 +260,7 @@ article header img {
 
 <meta itemprop="datePublished" content="2018-05-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1996">
+<meta itemprop="wordCount" content="2045">
 
   <meta itemprop="image" content="https://prertik.github.io/static/tenor.gif">
 
@@ -522,7 +522,9 @@ Only use &ndash;force flag if you know what you&rsquo;re doing. The conflict mes
 <li><p>After making a pull request, you mustn&rsquo;t do <code>git rebase</code> as it becomes a public branch for others to review the code. Hence, before submitting the pull request/s, it is better to use interactive rebase to clean up the code.</p></li>
 </ol>
 
-<p>There is another important flag <code>-p</code> or <code>--preserve-merges</code> which you can use with rebase.<code>--preserve merges</code> will recreate merge commits instead of flattening the history. It will replay commits a merge commit introduces. The merge conflict resolutions are not preserved. <code>--preserve merges</code> uses <code>--interactive</code> internally and combining it with <code>--interactive</code> option while rebasing can trigger a bug present which can produce dubious results when re-ordering the commits. The bug detail can be found <a href="https://git-scm.com/docs/git-rebase#_bugs">here</a>.</p>
+<p>There is another important flag <code>-p</code> or <code>--preserve-merges</code> which you can use with rebase.<code>--preserve-merges</code> will recreate merge commits instead of flattening the history. It will replay commits a merge commit introduces. The merge conflict resolutions are not preserved. <code>--preserve-merges</code> uses <code>--interactive</code> internally and combining it with <code>--interactive</code> option while rebasing can trigger a bug present which can produce dubious results when re-ordering the commits. The bug detail can be found <a href="https://git-scm.com/docs/git-rebase#_bugs">here</a>.</p>
+
+<p><a href="https://github.com/dscho">Johannes Schindelin</a> has also worked in <code>--recreate-merges</code> option which is still in review process and in <code>pu</code> branch in git repository as of now. This option is an alternative to <code>--preserve-merges</code> and is created to deprecate it. @dscho has written clear detail of the working of <code>--recreate-merges</code> in the <a href="https://public-inbox.org/git/71c42d6d3bb240d90071d5afdde81d1293fdf0ab.1516225925.git.johannes.schindelin@gmx.de/">mailing list</a>.</p>
 
 <p>All in all both merging and rebasing are equally important. Rebase is an awesome tool we&rsquo;re lucky to have in our toolbox. Some might complain that they had to bisect through several hundred commits to track down the bug which was introduced due to a faulty rebase. To prevent these problems, one of my mentor during this GSoC, <a href="https://twitter.com/christiancouder">Christian Couder</a> <a href="http://colabti.org/irclogger/irclogger_log/git-devel?date=2018-05-06">pointed</a> out that using <code>git rebase --exec make master</code> it&rsquo;s possible to check that each commit from master to the tip of the current branch builds. So, rebase can help people check that rebase did not introduce bugs. He also pointed out that using rebase with <code>--exec</code>, we can run tests for each commit while using rebase.</p>
 
@@ -614,7 +616,7 @@ Only use &ndash;force flag if you know what you&rsquo;re doing. The conflict mes
   
     and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a>, <a href="/tags/merge/">merge</a>, <a href="/tags/rebase/">rebase</a> and <a href="/tags/shell/">shell</a>
   
-  using <span itemprop="wordCount">1996</span> words.
+  using <span itemprop="wordCount">2045</span> words.
 </p>
 
       
