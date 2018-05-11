@@ -260,7 +260,7 @@ article header img {
 
 <meta itemprop="datePublished" content="2018-05-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2053">
+<meta itemprop="wordCount" content="2054">
 
   <meta itemprop="image" content="https://prertik.github.io/static/tenor.gif">
 
@@ -500,7 +500,7 @@ To do this do the following:</p>
 
 <p>There is also an important case where you need to recover from upstream rebase. The rebase <a href="https://git-scm.com/docs/git-rebase#_recovering_from_upstream_rebase">doc</a> details nicely and enough for understanding it. Don&rsquo;t miss it.</p>
 
-<p>There are people&rsquo;s different opinions regarding rebase and merge. People claim one is better than the other. But, rather than claiming superiority of one over another and creating another flame war, we must embrace both as both are very important for varying situations. The amazing thing about Git is it doesn&rsquo;t force one more over another. It does what the maintainer prefers. So, using over another is a matter of taste and may be due to certain cases but, claiming never to use one and always use another one because it is better is doing un-justice to the tooling and missing out on a great tool.</p>
+<p>There are people&rsquo;s different opinions regarding rebase and merge. People claim one is better than the other. But, rather than claiming superiority of one over another and creating another flame war, we must embrace both as both are very important for varying situations. The amazing thing about Git is it doesn&rsquo;t force one more over another. It does what the maintainer prefers. So, using one over another is a matter of taste and may be due to certain cases but, claiming never to use one and always use another one because it is better is doing un-justice to the tooling and missing out on a great tool.</p>
 
 <p>With that said, let&rsquo;s look onto the scenarios where you can use Rebase or the cases for using Rebasing.</p>
 
@@ -508,8 +508,8 @@ To do this do the following:</p>
 <li><p>Never use rebase on public branches.
 Never rebase the master branch onto your feature branch. Since, this will only trigger change in your repository and everyone will be working on original master. You will need to synchronize your master branch with the original one i.e. merge them back together because your master branch history has diverged from everybody else&rsquo;s. You will need two sets of commits that does the same change to fix and can be very confusing. So, think carefully before running <code>git rebase</code>.</p></li>
 
-<li><p>Be careful or omit &ndash;force flag in pushing a rebased master branch into remote repository.
-Only use &ndash;force flag if you know what you&rsquo;re doing. The conflict messages are there to help you find the errors. One of the only times you might need to force-push is when you&rsquo;ve performed a local cleanup after you&rsquo;ve pushed a private feature branch to a remote repository.</p></li>
+<li><p>Be careful or omit <code>--force</code> flag in pushing a rebased master branch into remote repository.
+Only use <code>--force</code> flag if you know what you&rsquo;re doing. The conflict messages are there to help you find the errors. One of the only times you might need to force-push is when you&rsquo;ve performed a local cleanup after you&rsquo;ve pushed a private feature branch to a remote repository.</p></li>
 </ol>
 
 <h2 id="best-cases-for-rebase-use">Best cases for Rebase use:</h2>
@@ -616,7 +616,7 @@ Only use &ndash;force flag if you know what you&rsquo;re doing. The conflict mes
   
     and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a>, <a href="/tags/merge/">merge</a>, <a href="/tags/rebase/">rebase</a> and <a href="/tags/shell/">shell</a>
   
-  using <span itemprop="wordCount">2053</span> words.
+  using <span itemprop="wordCount">2054</span> words.
 </p>
 
       
