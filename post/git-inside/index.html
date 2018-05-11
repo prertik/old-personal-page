@@ -260,7 +260,7 @@ article header img {
 
 <meta itemprop="datePublished" content="2018-05-10T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-05-10T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2046">
+<meta itemprop="wordCount" content="2052">
 
   <meta itemprop="image" content="https://prertik.github.io/static/tenor.gif">
 
@@ -322,7 +322,7 @@ By convention, it is understood that <code>rebase</code> is harder to understand
 </figure>
 
 <p>Ok, let&rsquo;s de-structure <code>git-rebase</code>. The general idea of rebase is that it is used to reapply commits on top of another base tip.
-Suppose, you&rsquo;re working on a tech company which has many Engineers and your choice of DVCS is Git. Now, to introduce new features, the developers will work in their own feature branch which has to be merged someday or rebased into the master.</p>
+Suppose, you&rsquo;re working in a tech company which has many Engineers and your choice of DVCS is Git. Now, to introduce new features, the developers will work in their own feature branch which has to be merged someday or rebased into the master.</p>
 
 <p>Suppose, the structure of the branch is:</p>
 
@@ -333,7 +333,7 @@ Suppose, you&rsquo;re working on a tech company which has many Engineers and you
      B1---B2 feature
 </code></pre>
 
-<p>Now, you&rsquo;re base branch is M0 and the developers based their feature branch B1 on it. But, since there is always development going on a tech company. The master branch gradually develops to M1 and M2. While the base branch also gradually develops to B2. The developers will find certain aspects have changed in the code base and they need to keep up with the master branch.
+<p>Now, you&rsquo;re base branch is M0 and the developers based their feature branch B1 on it. But, since there is always development going on in a tech company. The master branch gradually develops to M1 and M2. While the feature branch also gradually develops to B2. The developers will find certain aspects have changed in the code base and they need to keep up with the master branch.
 Hence they will do,</p>
 
 <pre><code class="language-git">git rebase master
@@ -349,7 +349,7 @@ git rebase master feature
               B1'---B2' feature
 </code></pre>
 
-<p>Now, life goes on, hence, more development happens on. Assume the structure after some time:</p>
+<p>Now, life goes on, hence, more code is written and branches keep on growing. Assume the structure after some time:</p>
 
 <pre><code class="language-ascii">M0---M1---M2---M3---B3'---M4---M5---M6---M7 master
            \
@@ -616,7 +616,7 @@ Only use &ndash;force flag if you know what you&rsquo;re doing. The conflict mes
   
     and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a>, <a href="/tags/merge/">merge</a>, <a href="/tags/rebase/">rebase</a> and <a href="/tags/shell/">shell</a>
   
-  using <span itemprop="wordCount">2046</span> words.
+  using <span itemprop="wordCount">2052</span> words.
 </p>
 
       
