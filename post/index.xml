@@ -6,10 +6,22 @@
     <description>Recent content in Posts on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 03 and Week 04 Progress</title>
+      <link>https://prertik.github.io/post/week-03/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-03/</guid>
+      <description>Hi everyone,
+Sorry for the late blog. There wasn&amp;rsquo;t more action on week 03 and there was some action on week 04 *finally*. So, I had to merge both.
+Oh and a note to the readers, the previously assured Part II of Git Rebase will take some time as I plan to explain you the workings from the rebase builtin I will create. :-)
+So, during these two weeks, a skeletal for rebase builtin was created.</description>
+    </item>
     
     <item>
       <title>Git Inside® Part I: Don&#39;t Fear the Rebase</title>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.39-DEV" />
+    <meta name="generator" content="Hugo 0.41" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tags | (recur code)</title>
@@ -25,7 +25,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-05-10T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-05-28T00:00:00&#43;00:00"/>
 
 
 
@@ -49,15 +49,23 @@
 
     
     
+  <meta name="referrer" content="same-origin">
+
+
+    
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-108523579-1', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-108523579-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://prertik.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="(recur code)" />
+      <link href="https://prertik.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="(recur code)">
     
     <link rel="canonical" href="https://prertik.github.io/tags/">
     
@@ -86,7 +94,8 @@ ga('send', 'pageview');
   -webkit-filter: blur(0);
   filter: blur(0);
 }
-.muted {
+.muted,
+.hack .help-block {
   color: #e0e0e070;
 }
 .hack .readmore {
@@ -137,6 +146,19 @@ blockquote cite::before {
 .main {
   padding: 20px 10px;
 }
+input.form-control {
+  border-radius: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+input.form-control {
+  font-size: initial;
+}
+.hack .help-block {
+  font-size: 1rem;
+}
 nav a.active {
   background-color: #ff2e88;
   color: #fff;
@@ -160,6 +182,12 @@ html {
 }
 .hack pre {
   font-size: 17px;
+}
+.hack .form input,
+.hack .form textarea,
+.hack .form button,
+.hack .form label {
+  font-size: 1rem;
 }
 article [itemprop="description"] {
   margin-bottom: 20px;
@@ -252,9 +280,9 @@ article header img {
   </header>
   <ul>
     
-      <li><a href="c">c</a> (2)
+      <li><a href="c">c</a> (3)
     
-      <li><a href="git">git</a> (2)
+      <li><a href="git">git</a> (3)
     
       <li><a href="merge">merge</a> (1)
     
@@ -262,7 +290,7 @@ article header img {
     
       <li><a href="rebase">rebase</a> (1)
     
-      <li><a href="shell">shell</a> (2)
+      <li><a href="shell">shell</a> (3)
     
   </ul>
 </main>
