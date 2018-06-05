@@ -6,10 +6,22 @@
     <description>Recent content in C on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 05 Progress</title>
+      <link>https://prertik.github.io/post/week-05/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-05/</guid>
+      <description>Hello everyone,
+This week I have been working on migrating small shell scripting component to C builtin. The work will be towards parsing a small modular component so that it can directly be used. With the development of my current patch, the rebase built-in that I will work on can do a super simple rebase.
+I might be able to demonstrate something in 2-3 days.
+That&amp;rsquo;s a wrap up for this week.</description>
+    </item>
     
     <item>
       <title>Week 03 and Week 04 Progress</title>
