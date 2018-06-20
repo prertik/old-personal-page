@@ -250,7 +250,7 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
 
 <meta itemprop="datePublished" content="2018-06-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2018-06-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="304">
+<meta itemprop="wordCount" content="356">
 
 
 
@@ -287,7 +287,7 @@ Maybe try this:</p>
 <pre><code class="language-shell">./git --exec-path=&quot;$PWD&quot; -c rebase.usebuiltin=true rebase HEAD^
 </code></pre>
 
-<p>Or if you feel more adventurous maybe try this?</p>
+<p>Or if you want to use your terminal more maybe try this?</p>
 
 <pre><code class="language-shell">mkdir 123
 git init 123
@@ -303,14 +303,14 @@ cd ..
 <p>Did you get a message saying <code>warning: TODO</code>? Well it&rsquo;s because the <code>apply_autostash()</code> hasn&rsquo;t been implemented yet&hellip;
 Modifying this and making it run will be handled in later patch.</p>
 
-<p>Well if you try <code>echo $?</code> it returns 0 which is a proof of saying that our code works till that point i.e. until the <code>apply_autostash()</code>. Still lots of environment variables need to be set. There&rsquo;s still _a_lot_ to do but we are close to the promised awesome rebase.</p>
+<p>Well if you try <code>echo $?</code> it returns 0 which is a proof of saying that our code works till that point i.e. until the <code>apply_autostash()</code>. Still lots of environment variables need to be set. There&rsquo;s still _a_lot_ to do as we are moving steadily towards a working builtin rebase. The full rebase as promised is very hard to reach as it requires lots and lots of configurations and coding. Time will tell how much I can complete in this GSoC time period and with every week the code is somewhat progressing towards something awesome. :-)</p>
 
 <p>There are lots of awesome things going on here which I&rsquo;ll explain in the blog post where I&rsquo;ll breakdown every functions and total internal workings of my code of builtin rebase.</p>
 
 <p>Oh and one important thing if you want to have a collaborative coding session but are waiting for some positive review to try <a href="https://code.visualstudio.com/blogs/2017/11/15/live-share">Visual Studio Live Share</a>.
 You have mine. It works nicely. Though it&rsquo;s still in preview and lots of improvements are needed, it&rsquo;s very usable and get you more productive.</p>
 
-<p>That&rsquo;s it for this week.</p>
+<p>That&rsquo;s it for this week. Stay tuned.</p>
 
     </div>
     
@@ -355,7 +355,7 @@ You have mine. It works nicely. Though it&rsquo;s still in preview and lots of i
   
     and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a> and <a href="/tags/shell/">shell</a>
   
-  using <span itemprop="wordCount">304</span> words.
+  using <span itemprop="wordCount">356</span> words.
 </p>
 
       
