@@ -6,10 +6,20 @@
     <description>Recent content on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 08 Progress</title>
+      <link>https://prertik.github.io/post/week-08/</link>
+      <pubDate>Mon, 25 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-08/</guid>
+      <description>Hello Everyone.
+This is week was awesome. The patch I&amp;rsquo;m working on hit a milestone. Now, it can perform a real rebase. Of course, the environment variables are kept default and this might introduce bugs but for development purposes; to see real development, this is one amazing way. There was also some work on refactoring out codes from sequencer.c to checkout.c so that the codes can be used from our builtin rebase.</description>
+    </item>
     
     <item>
       <title>:-/</title>
