@@ -6,10 +6,21 @@
     <description>Recent content in Posts on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 09 Progress</title>
+      <link>https://prertik.github.io/post/week-09/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-09/</guid>
+      <description>Hi,
+This week I submitted patch v1 ,v2 and am working on v3. On the other hand, there are other works going on towards converting the options of git-rebase.sh. Currently, the options supported are --onto, --quiet, --verify, --continue and support for an upstream that is actually a symmetric range i.e. &amp;lt;rev1&amp;gt;...&amp;lt;rev2&amp;gt; is also done.
+All of these progress can be seen from pull requests. Cleanup and addition of proper message will be done in the coming days.</description>
+    </item>
     
     <item>
       <title>Week 08 Progress</title>
