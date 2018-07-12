@@ -6,10 +6,21 @@
     <description>Recent content in Posts on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 10 Progress</title>
+      <link>https://prertik.github.io/post/week-10/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-10/</guid>
+      <description>Hello from Kathmandu where it has been raining a lot!
+This week also there were some development on rebase land!
+Continuing form the past week blog post, I submitted newer iterations of patch. Well, after some excellent review, the patch seemed to need some important changes, it was merged into pu but a re-roll is expected to fix some issues in it. New iteration of this patch series will take some time to arrive.</description>
+    </item>
     
     <item>
       <title>Week 09 Progress</title>
