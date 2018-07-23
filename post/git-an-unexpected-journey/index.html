@@ -1,3 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="generator" content="Hugo 0.44" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git: An Unexpected Journey | (recur code)</title>
+    <meta name="description" content="A gentle git introduction">
+    <meta name="keywords" content="Git, C, Shell, Open-source">
+    
+    
+    
+    
+    
+
+  <meta name="author" content="Pratik Karki">
+
+
+    <meta property="og:title" content="Git: An Unexpected Journey" />
+<meta property="og:description" content="A gentle git introduction" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://prertik.github.io/post/git-an-unexpected-journey/" />
+
+  <meta property="og:image" content="https://prertik.github.io/static/sanic.png" />
 
 
 
+<meta property="article:published_time" content="2018-05-01T06:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-05-01T06:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://prertik.github.io/static/sanic.png"/>
+
+<meta name="twitter:title" content="Git: An Unexpected Journey"/>
+<meta name="twitter:description" content="A gentle git introduction"/>
+
+    
+
+
+
+
+    
+
+    <meta name="theme-color" content="#000">
+
+    
+    
+  <meta name="referrer" content="same-origin">
+
+
+    
+
+    
+    <link rel="canonical" href="https://prertik.github.io/post/git-an-unexpected-journey/">
+    
+    
+    <link rel = "icon" sizes = "any" href ="/static/favicon.ico">
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+    
+      <style>html{font-size:12px}*{box-sizing:border-box;text-rendering:geometricPrecision}body{font-size:1rem;line-height:1.5rem;margin:0;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;word-wrap:break-word}h1,h2,h3,h4,h5,h6{line-height:1.3em}fieldset{border:none;padding:0;margin:0}pre{padding:2rem;margin:1.75rem 0;background-color:#fff;border:1px solid #ccc;overflow:auto}code[class*=language-],pre[class*=language-],pre code{font-weight:100;text-shadow:none;margin:1.75rem 0}a{cursor:pointer;color:#ff2e88;text-decoration:none;border-bottom:1px solid #ff2e88}a:hover{background-color:#ff2e88;color:#fff}.grid{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.grid.\-top{-ms-flex-align:start;align-items:flex-start}.grid.\-middle{-ms-flex-align:center;align-items:center}.grid.\-bottom{-ms-flex-align:end;align-items:flex-end}.grid.\-stretch{-ms-flex-align:stretch;align-items:stretch}.grid.\-baseline{-ms-flex-align:baseline;align-items:baseline}.grid.\-left{-ms-flex-pack:start;justify-content:flex-start}.grid.\-center{-ms-flex-pack:center;justify-content:center}.grid.\-right{-ms-flex-pack:end;justify-content:flex-end}.grid.\-between{-ms-flex-pack:justify;justify-content:space-between}.grid.\-around{-ms-flex-pack:distribute;justify-content:space-around}.cell{-ms-flex:1;flex:1;box-sizing:border-box}@media screen and (min-width:768px){.cell.\-1of12{-ms-flex:0 0 8.33333%;flex:0 0 8.33333%}.cell.\-2of12{-ms-flex:0 0 16.66667%;flex:0 0 16.66667%}.cell.\-3of12{-ms-flex:0 0 25%;flex:0 0 25%}.cell.\-4of12{-ms-flex:0 0 33.33333%;flex:0 0 33.33333%}.cell.\-5of12{-ms-flex:0 0 41.66667%;flex:0 0 41.66667%}.cell.\-6of12{-ms-flex:0 0 50%;flex:0 0 50%}.cell.\-7of12{-ms-flex:0 0 58.33333%;flex:0 0 58.33333%}.cell.\-8of12{-ms-flex:0 0 66.66667%;flex:0 0 66.66667%}.cell.\-9of12{-ms-flex:0 0 75%;flex:0 0 75%}.cell.\-10of12{-ms-flex:0 0 83.33333%;flex:0 0 83.33333%}.cell.\-11of12{-ms-flex:0 0 91.66667%;flex:0 0 91.66667%}}@media screen and (max-width:768px){.grid{-ms-flex-direction:column;flex-direction:column}.cell{-ms-flex:0 0 auto;flex:0 0 auto}}.hack,.hack blockquote,.hack code,.hack em,.hack h1,.hack h2,.hack h3,.hack h4,.hack h5,.hack h6,.hack strong{font-size:1rem;font-style:normal;font-family:Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif}.hack blockquote,.hack code,.hack em,.hack strong{line-height:20px}.hack blockquote,.hack code,.hack footer,.hack h1,.hack h2,.hack h3,.hack h4,.hack h5,.hack h6,.hack header,.hack li,.hack ol,.hack p,.hack section,.hack ul{float:none;margin:0;padding:0}.hack blockquote,.hack h1,.hack ol,.hack p,.hack ul{margin-top:20px;margin-bottom:20px}.hack h1{position:relative;display:inline-block;display:table-cell;padding:20px 0 30px;margin:0;overflow:hidden}.hack h1:after{content:"====================================================================================================";position:absolute;bottom:10px;left:0}.hack h1+*{margin-top:0}.hack h2,.hack h3,.hack h4,.hack h5,.hack h6{position:relative;margin-bottom:1.75rem}.hack h2:before,.hack h3:before,.hack h4:before,.hack h5:before,.hack h6:before{display:inline}.hack h2:before{content:"## "}.hack h3:before{content:"### "}.hack h4:before{content:"#### "}.hack h5:before{content:"##### "}.hack h6:before{content:"###### "}.hack li{position:relative;display:block;padding-left:20px}.hack li:after{position:absolute;top:0;left:0}.hack ul>li:after{content:"-"}.hack ol{counter-reset:a}.hack ol>li:after{content:counter(a) ".";counter-increment:a}.hack ol li:nth-child(n+10):after{left:-7px}.hack blockquote{position:relative;padding-left:17px;padding-left:2ch;overflow:hidden}.hack blockquote:after{content:">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";white-space:pre;position:absolute;top:0;left:0;line-height:20px}.hack em:after,.hack em:before{content:"*";display:inline}.hack pre code:after,.hack pre code:before{content:""}.hack code{font-weight:700}.hack code:after,.hack code:before{content:"`";display:inline}.hack hr{position:relative;height:20px;overflow:hidden;border:0;margin:20px 0}.hack hr:after{content:"----------------------------------------------------------------------------------------------------";position:absolute;top:0;left:0;line-height:20px;width:100%;word-wrap:break-word}@-moz-document url-prefix(){.hack h1{display:block}}.hack-ones ol>li:after{content:"1."}p{margin:0 0 1.75rem}.container{max-width:70rem}.container,.container-fluid{margin:0 auto;padding:0 1rem}.inner{padding:1rem}.inner2x{padding:2rem}.pull-left{float:left}.pull-right{float:right}.progress-bar{height:8px;opacity:.8;background-color:#ccc;margin-top:12px}.progress-bar.progress-bar-show-percent{margin-top:38px}.progress-bar-filled{background-color:gray;height:100%;transition:width .3s ease;position:relative;width:0}.progress-bar-filled:before{content:"";border:6px solid transparent;border-top-color:gray;position:absolute;top:-12px;right:-6px}.progress-bar-filled:after{color:gray;content:attr(data-filled);display:block;font-size:12px;white-space:nowrap;position:absolute;border:6px solid transparent;top:-38px;right:0;-ms-transform:translateX(50%);transform:translateX(50%)}table{width:100%;border-collapse:collapse;margin:1.75rem 0;color:#778087}table td,table th{vertical-align:top;border:1px solid #ccc;line-height:15px;padding:10px}table thead th{font-size:10px}table tbody td:first-child{font-weight:700;color:#333}.form{width:30rem}.form-group{margin-bottom:1.75rem;overflow:auto}.form-group label{border-bottom:2px solid #ccc;color:#333;width:10rem;display:inline-block;height:38px;line-height:38px;padding:0;float:left;position:relative}.form-group.form-success label{color:#4caf50!important;border-color:#4caf50!important}.form-group.form-warning label{color:#ff9800!important;border-color:#ff9800!important}.form-group.form-error label{color:#f44336!important;border-color:#f44336!important}.form-control{outline:none;border:none;border-bottom:2px solid #ccc;padding:.5rem 0;width:20rem;height:38px;background-color:transparent}.form-control:focus{border-color:#555}.form-group.form-textarea label:after{position:absolute;content:"";width:2px;background-color:#fff;right:-2px;top:0;bottom:0}textarea.form-control{height:auto;resize:none;padding:1rem 0;border-bottom:2px solid #ccc;border-left:2px solid #ccc;padding:.5rem}select.form-control{border-radius:0;background-color:transparent;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none}.help-block{color:#999;margin-top:.5rem}.form-actions{margin-bottom:1.75rem}.btn{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;cursor:pointer;outline:none;padding:.65rem 2rem;font-size:1rem;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;z-index:1}.btn:active{box-shadow:inset 0 1px 3px rgba(0,0,0,.12)}.btn.btn-ghost{border-color:#757575;color:#757575;background-color:transparent}.btn.btn-ghost:focus,.btn.btn-ghost:hover{border-color:#424242;color:#424242;z-index:2}.btn.btn-ghost:hover{background-color:transparent}.btn-block{width:100%;display:-ms-flexbox;display:flex}.btn-default{color:#fff;background-color:#e0e0e0;border:1px solid #e0e0e0;color:#333}.btn-default:focus:not(.btn-ghost),.btn-default:hover{background-color:#dcdcdc;border-color:#dcdcdc}.btn-success{color:#fff;background-color:#4caf50;border:1px solid #4caf50}.btn-success:focus:not(.btn-ghost),.btn-success:hover{background-color:#43a047;border-color:#43a047}.btn-success.btn-ghost{border-color:#4caf50;color:#4caf50}.btn-success.btn-ghost:focus,.btn-success.btn-ghost:hover{border-color:#388e3c;color:#388e3c;z-index:2}.btn-error{color:#fff;background-color:#f44336;border:1px solid #f44336}.btn-error:focus:not(.btn-ghost),.btn-error:hover{background-color:#e53935;border-color:#e53935}.btn-error.btn-ghost{border-color:#f44336;color:#f44336}.btn-error.btn-ghost:focus,.btn-error.btn-ghost:hover{border-color:#d32f2f;color:#d32f2f;z-index:2}.btn-warning{color:#fff;background-color:#ff9800;border:1px solid #ff9800}.btn-warning:focus:not(.btn-ghost),.btn-warning:hover{background-color:#fb8c00;border-color:#fb8c00}.btn-warning.btn-ghost{border-color:#ff9800;color:#ff9800}.btn-warning.btn-ghost:focus,.btn-warning.btn-ghost:hover{border-color:#f57c00;color:#f57c00;z-index:2}.btn-info{color:#fff;background-color:#00bcd4;border:1px solid #00bcd4}.btn-info:focus:not(.btn-ghost),.btn-info:hover{background-color:#00acc1;border-color:#00acc1}.btn-info.btn-ghost{border-color:#00bcd4;color:#00bcd4}.btn-info.btn-ghost:focus,.btn-info.btn-ghost:hover{border-color:#0097a7;color:#0097a7;z-index:2}.btn-primary{color:#fff;background-color:#2196f3;border:1px solid #2196f3}.btn-primary:focus:not(.btn-ghost),.btn-primary:hover{background-color:#1e88e5;border-color:#1e88e5}.btn-primary.btn-ghost{border-color:#2196f3;color:#2196f3}.btn-primary.btn-ghost:focus,.btn-primary.btn-ghost:hover{border-color:#1976d2;color:#1976d2;z-index:2}.btn-group{overflow:auto}.btn-group .btn{float:left}.btn-group .btn-ghost:not(:first-child){margin-left:-1px}.card{border:1px solid #ccc}.card .card-header{color:#333;text-align:center;background-color:#ddd;padding:.5rem 0}.alert{color:#ccc;padding:1rem;border:1px solid #ccc;margin-bottom:1.75rem}.alert-success{color:#4caf50;border-color:#4caf50}.alert-error{color:#f44336;border-color:#f44336}.alert-info{color:#00bcd4;border-color:#00bcd4}.alert-warning{color:#ff9800;border-color:#ff9800}.media:not(:last-child){margin-bottom:1.25rem}.media-left{padding-right:1rem}.media-left,.media-right{display:table-cell;vertical-align:top}.media-right{padding-left:1rem}.media-body{display:table-cell;vertical-align:top}.media-heading{font-size:1.16667rem;font-weight:700}.media-content{margin-top:.3rem}.avatarholder,.placeholder{background-color:#f0f0f0;text-align:center;color:#b9b9b9;font-size:1rem;border:1px solid #f0f0f0}.avatarholder{width:48px;height:48px;line-height:46px;font-size:2rem;background-size:cover;background-position:50%;background-repeat:no-repeat}.avatarholder.rounded{border-radius:33px}.loading{display:inline-block;content:"&nbsp;";height:20px;width:20px;margin:0 .5rem;animation:a .6s infinite linear;border:2px solid #e91e63;border-right-color:transparent;border-radius:50%}.btn .loading{margin-bottom:0;width:14px;height:14px}.btn div.loading{float:left}.alert .loading{margin-bottom:-5px}@keyframes a{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.menu{width:100%}.menu .menu-item{display:block;color:#616161;border-color:#616161}.menu .menu-item.active,.menu .menu-item:hover{color:#000;border-color:#000;background-color:transparent}@media screen and (max-width:768px){.form-group label{display:block;border-bottom:none;width:100%}.form-group.form-textarea label:after{display:none}.form-control{width:100%}textarea.form-control{border-left:none;padding:.5rem 0}pre::-webkit-scrollbar{height:3px}}@media screen and (max-width:480px){.form{width:100%}}.dark{color:#ccc}.dark,.dark pre{background-color:#000}.dark pre{padding:0;border:none}.dark pre code{color:#00bcd4}.dark h1 a,.dark h2 a,.dark h3 a,.dark h4 a,.dark h5 a{color:#ccc}.dark code,.dark strong{color:#fff}.dark code{font-weight:100}.dark table{color:#ccc}.dark table td,.dark table th{border-color:#444}.dark table tbody td:first-child{color:#fff}.dark .form-group label{color:#ccc;border-color:rgba(95,95,95,.78)}.dark .form-group.form-textarea label:after{background-color:#000}.dark .form-control{color:#ccc;border-color:rgba(95,95,95,.78)}.dark .form-control:focus{border-color:#ccc;color:#ccc}.dark textarea.form-control{color:#ccc}.dark .card{border-color:rgba(95,95,95,.78)}.dark .card .card-header{background-color:transparent;color:#ccc;border-bottom:1px solid rgba(95,95,95,.78)}.dark .btn.btn-ghost.btn-default{border-color:#ababab;color:#ababab}.dark .btn.btn-ghost.btn-default:focus,.dark .btn.btn-ghost.btn-default:hover{border-color:#9c9c9c;color:#9c9c9c;z-index:1}.dark .btn.btn-ghost.btn-default:focus,.dark .btn.btn-ghost.btn-default:hover{border-color:#e0e0e0;color:#e0e0e0}.dark .btn.btn-ghost.btn-primary:focus,.dark .btn.btn-ghost.btn-primary:hover{border-color:#64b5f6;color:#64b5f6}.dark .btn.btn-ghost.btn-success:focus,.dark .btn.btn-ghost.btn-success:hover{border-color:#81c784;color:#81c784}.dark .btn.btn-ghost.btn-info:focus,.dark .btn.btn-ghost.btn-info:hover{border-color:#4dd0e1;color:#4dd0e1}.dark .btn.btn-ghost.btn-error:focus,.dark .btn.btn-ghost.btn-error:hover{border-color:#e57373;color:#e57373}.dark .btn.btn-ghost.btn-warning:focus,.dark .btn.btn-ghost.btn-warning:hover{border-color:#ffb74d;color:#ffb74d}.dark .avatarholder,.dark .placeholder{background-color:transparent;border-color:#333}.dark .menu .menu-item{color:#ccc;border-color:rgba(95,95,95,.78)}.dark .menu .menu-item.active,.dark .menu .menu-item:hover{color:#fff;border-color:#ccc}:root{--screen-size-small: 30em}@keyframes intro{0%{opacity:0}100%{opacity:1}}.blur-up{-webkit-filter:blur(5px);filter:blur(5px);transition:filter 400ms,-webkit-filter 400ms}.blur-up.lazyloaded{-webkit-filter:blur(0);filter:blur(0)}.hack .readmore{margin-bottom:2.2em}.responsive-iframe{position:relative;padding-bottom:56.25%;padding-top:25px;height:0}.responsive-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%}iframe{border:0}main,footer{animation:intro .3s both;animation-delay:.15s}footer time[datetime$=M]:before{content:"\2013\0020"}@media only screen and (max-width:30em){footer time[datetime$=M]{display:none}}blockquote cite{display:block}blockquote cite::before{content:"\2014"}:target{color:#fff}.hack li ul{margin:0}.main{padding:20px 10px}input.form-control{border-radius:0;background-color:transparent;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none}input.form-control{font-size:initial}.hack .help-block{font-size:1rem}html{font-size:13px}.hack pre{font-size:17px}.hack .form input,.hack .form textarea,.hack .form button,.hack .form label{font-size:1rem}article [itemprop=description]{margin-bottom:20px;margin-top:20px}article header img{width:100%;border-radius:3px}@media screen and (min-width:768px){html{font-size:1em}.container{max-width:50rem}}[v-cloak]{display:none}a[href*="://"]::after,
+a[rel*="external"] {
+  content: " " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%23ff9800'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");
+}
+figure a[href*="://"]::after,
+figure a[rel*="external"] {
+  content: "";
+}
+nav a.active {
+  background-color: #ff2e88;
+  color: #fff;
+}
+a[itemprop="url"] {
+  color: #ff9800;
+}
+a[itemprop="url"]:hover {
+  color: #fff;
+}
+.muted,
+.hack .help-block {
+  color: #e0e0e070;
+}
+</style>
+    
+  
+
+
+    <script async src=/js/lazysizes.min.js></script>
+
+  <script async src=/js/bpgdec8a.js></script>
+  <script async src=/js/bpgdec8.js></script>
+  <script async src=/js/bpgdec.js></script>
+
+
+  </head>
+  
+  
+  
+  <body class="hack dark main container">
+    <header>
+  
+  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+    
+    
+      <a itemprop="url" class="" href="/"><span itemprop="name">Home</span></a>
+    
+      <a itemprop="url" class="" href="/about/about/"><span itemprop="name">About</span></a>
+    
+      <a itemprop="url" class="" href="/categories/git/"><span itemprop="name">Git</span></a>
+    
+      <a itemprop="url" class="" href="/categories/ewrites/"><span itemprop="name">Extra Writings</span></a>
+    
+      <a itemprop="url" class="active" href="/post/"><span itemprop="name">Posts</span></a>
+    
+  </nav>
+
+
+</header>
+    <main>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="Git: An Unexpected Journey">
+<meta itemprop="description" content="A gentle git introduction">
+
+
+<meta itemprop="datePublished" content="2018-05-01T06:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-05-01T06:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1064">
+
+  <meta itemprop="image" content="https://prertik.github.io/static/sanic.png">
+
+
+
+<meta itemprop="keywords" content="Git,C,Shell,Open-source," />
+
+    <header>
+      <h1 itemprop="headline">Git: An Unexpected Journey</h1>
+      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>5 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Published: <time datetime="2018-05-01T06:00:00&#43;00:00">1 May, 2018</time>
+
+</p>
+    </header>
+    
+      <blockquote itemprop="description">A gentle git introduction</blockquote>
+    
+    
+
+    <div itemprop="articleBody">
+      
+
+<p>This summer of &lsquo;18, I&rsquo;ll be working in Git. Git is an insanely
+awesome software. I still remember the day I learned about Git via
+Github and instantly got hooked. Git isn&rsquo;t just an everyday software
+you encounter, just look at the documentation and observe closely
+how it works and you will understand the rock solid design.
+Enough with Git introduction already. There are <em>too</em> <em>much</em> posts
+describing Git already.</p>
+
+<h2 id="sending-patches">Sending Patches</h2>
+
+<p>Rather than going to the theory of Git, lets learn how to send patch
+to Git. Sending patches to Git is different than sending patches to
+other JS Frameworks, Game Engines, etc. You don&rsquo;t use Github to send
+patches to Git. <a href="https://github.com/git/git/blob/master/Documentation/SubmittingPatches">Documentation/SubmittingPatches</a>
+already contains a great deal of information for anybody to learn
+how to send patch.
+But, let me summarize it.</p>
+
+<p>Ok, you&rsquo;ve modified some code. You check it and believe it doesn&rsquo;t break
+anything else. You run tests on it. It looks good. You follow the
+standard C writing guideline. So, you decide to send it.
+First you must do is fire up terminal and run <code>git diff --check</code>.
+If you don&rsquo;t see anything there, it&rsquo;s good you have not introduced
+whitespaces in your code. But, if you do see codes there fix
+those whitespaces. Git community is picky about whitespaces.</p>
+
+<p>Now, is the right time to run some tests. Always remember to test your
+changes. Running test suite provided in Git is the most preferred but
+if your change introduces something new, you can write a new test.
+There are two kinds of tests you can do:</p>
+
+<ul>
+<li><p>Functional tests: These are the core Git tests. These test scripts
+are mandatory to be run for changes and test must pass to introduce
+new patch. The easiest way to run all the tests is navigate to <code>/t</code>
+directory and run <code>make</code>. Another way is to run with any <a href="https://testanything.org/">TAP harness</a>.
+You can parallel test by using prove.
+<code>$ prove --timer --jobs 15 ./t[0-9]*.sh</code>
+You can also run single test by running the shell script with a name
+like <code>tNNNN-descriptor.sh</code>. If new functionality is added by you then
+unit tests need to be created by creating helper commands which have
+limited action. Keep these in <code>t/helpers</code>. To add helper add a line to
+<code>t/Makefile</code> and to <code>.gitignore</code> for the binary file you added. The Git
+community prefers functional tests using the full git executable, so try
+to exercise your new code using git commands before creating a test helper.
+To find out why a test failed, repeat the test with the -x -v -d -i options
+and then navigate to the appropriate &ldquo;trash&rdquo; directory to see the data shape
+that was used for the test failed step. More information can be found in <a href="https://github.com/git/git/blob/master/t/README">t/README</a></p></li>
+
+<li><p>Performance tests: If your changes improve performance or if your patch
+can affect performance, you need to run the tests in <code>t/perf</code>. To check the
+change in performance use <code>t/perf/run</code> script.
+More information about performance tests can be found in this awesome guideline
+written in Git for Windows <a href="https://github.com/git-for-windows/git/blob/master/CONTRIBUTING.md#performance-tests">Contributing document</a>
+which is applicable for both Linux and Windows.</p></li>
+</ul>
+
+<p>Then run <code>git log &lt;file you modified&gt;</code> and see all the changes you made.
+Now, think of good commit message. This is very important as it
+describes the maintainers what you are fixing. Write the first line
+of the commit message with a short description of about 50 characters.
+Also, prefix is needed for the first line like:
+<code>test: avoid pipes in git related commands for test</code>
+Now, in after the short description, you should write a lengthier
+commit message describing the changes you made. The commit message
+should be in imperative mood. e.g. &ldquo;avoid using pipes &hellip;&rdquo;.
+This should be very descriptive and very clear of what you&rsquo;ve done.
+Also, remember to sign-off your patch. Run <code>git commit &lt;files&gt; -s</code>.</p>
+
+<p>Now, time to generate your patch. Git has a tool for generating patches.
+Cool, right? Run <code>git format-patch HEAD~</code> to generate a single patch
+for your changes. If your change is of only a single type i.e. change
+in typo in different files then, only generate a single file. But, if
+your changes are in different files of different nature then, run
+<code>git format-patch HEAD~&lt;number of commits to convert to patches&gt;</code>.
+Remember you&rsquo;ll need multiple commits if you&rsquo;ve changed multiple files
+differently e.g. you changed a test file for typo and <code>git-rebase.sh</code>
+to add some extra functionalities, then you have to write two commit
+messages describing both changes.
+Now, a patch file or multiple patch files will be generated depending
+on your changes. You can apply this patchfile by running <code>git am &lt;patchfile&gt;</code>.</p>
+
+<p>Now, time to send to patch to the mailing list. Git has a tool for this
+too. Run <code>git send-email &lt;your-patch-file&gt;</code>. Now, to use send-email, you need
+to set up your mailing id and format message with the mail. This should be
+in plain text. Follow <a href="https://git-scm.com/docs/git-send-email">git send-email documentation</a>
+closely. This explains everything in much more detail.
+Your patch now, goes through lot of review process. Follow closely,
+discuss with the community, understand and acknowledge their comments.
+Write quality codes rather than large quantity.</p>
+
+<h2 id="gsoc-18">GSoC &lsquo;18</h2>
+
+<p>So, in this GSoC timeline. I&rsquo;ll be working to make <code>git rebase</code> a builtin.
+i.e. <code>git rebase</code> is previously written in shell scripts. My job is to convert
+it into C.
+Why is this necessary one might ask.
+Well, Many components of Git are still in the form of shell and Perl scripts.
+This has certain advantages of being extensible but causes problems in production
+code on multiple platforms like Windows. I&rsquo;m going to rewrite a couple of shell
+and perl scripts into portable and performant C code, making them built-ins.
+The major advantage of doing this is improvement in efficiency and performance.</p>
+
+<p>So, what does rebase do?
+There&rsquo;s a cool beginner friendly introduction to rebase <a href="https://dev.to/maxwell_dev/the-git-rebase-introduction-i-wish-id-had">here</a>
+Or, you can follow, <a href="https://git-scm.com/docs/git-rebase">git-rebase documentation</a>.
+I&rsquo;m not going to explain again here as it is already done in a much
+better way in both the git documentation and the post.
+Now, this is just a beginning post. I will be updating and keeping
+a series of what I learn from Git. I will be writing every week.
+This will be a great journey.</p>
+
+<p>Ah, nearly forgot to mention. If all of our patches in GSoC &lsquo;18 gets
+merged into Git. Git will be fast. How fast you might ask? Time will tell.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+  
+    
+      <img class="lazyload" data-src="/static/sanic.png"  />
+    
+  
+  
+</figure>
+
+    </div>
+    
+      <article>
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "prertik-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </article>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author">Pratik Karki</span>
+    
+  
+  <time itemprop="datePublished" datetime="2018-05-01T06:00:00&#43;00:00">
+    1 May, 2018
+  </time>
+  
+    in <span itemprop="articleSection"><a href="/categories/git/">git</a></span>
+  
+  
+    and tagged <a href="/tags/c/">C</a>, <a href="/tags/git/">Git</a>, <a href="/tags/open-source/">Open-source</a> and <a href="/tags/shell/">Shell</a>
+  
+  using <span itemprop="wordCount">1064</span> words.
+</p>
+
+      
+
+
+
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width:0"
+             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+      </a>
+    </footer>
+  </article>
+</main>
+    <footer>
+  
+
+</footer>
+  </body>
+</html>

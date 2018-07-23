@@ -4,10 +4,9 @@
     <meta name="generator" content="Hugo 0.44" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 07 Progress | (recur code)</title>
-    <meta name="description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks.">
-    <meta name="keywords" content="git, shell, c">
+    <title>(recur code)</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="ewrites, git, ">
     
     
     
@@ -17,18 +16,14 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
   <meta name="author" content="Pratik Karki">
 
 
-    <meta property="og:title" content="Week 07 Progress" />
-<meta property="og:description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://prertik.github.io/post/week-07/" />
+    <meta property="og:title" content="(recur code)" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://prertik.github.io/" />
 
 
 
-<meta property="article:published_time" content="2018-06-19T00:00:00&#43;00:00"/>
-
-<meta property="article:modified_time" content="2018-06-19T00:00:00&#43;00:00"/>
-
+<meta property="og:updated_time" content="2018-05-01T06:00:00&#43;00:00"/>
 
 
 
@@ -40,9 +35,8 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
 
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Week 07 Progress"/>
-<meta name="twitter:description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks."/>
+<meta name="twitter:title" content="(recur code)"/>
+<meta name="twitter:description" content=""/>
 
     
 
@@ -54,6 +48,12 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
     <meta name="theme-color" content="#000">
 
     
+      
+
+
+
+
+    
     
   <meta name="referrer" content="same-origin">
 
@@ -61,7 +61,9 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
     
 
     
-    <link rel="canonical" href="https://prertik.github.io/post/week-07/">
+      <link href="https://prertik.github.io/index.xml" rel="alternate" type="application/rss+xml" title="(recur code)">
+    
+    <link rel="canonical" href="https://prertik.github.io/">
     
     
     <link rel = "icon" sizes = "any" href ="/static/favicon.ico">
@@ -121,7 +123,7 @@ a[itemprop="url"]:hover {
   <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
     
     
-      <a itemprop="url" class="" href="/"><span itemprop="name">Home</span></a>
+      <a itemprop="url" class="active" href="/"><span itemprop="name">Home</span></a>
     
       <a itemprop="url" class="" href="/about/about/"><span itemprop="name">About</span></a>
     
@@ -129,161 +131,67 @@ a[itemprop="url"]:hover {
     
       <a itemprop="url" class="" href="/categories/ewrites/"><span itemprop="name">Extra Writings</span></a>
     
-      <a itemprop="url" class="active" href="/post/"><span itemprop="name">Posts</span></a>
+      <a itemprop="url" class="" href="/post/"><span itemprop="name">Posts</span></a>
     
   </nav>
 
 
 </header>
     <main>
-  <article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1>(recur code)</h1>
+  </header>
+  
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="/post/git-an-unexpected-journey/">Git: An Unexpected Journey</a>
+    </h2>
     
-<meta itemprop="name" content="Week 07 Progress">
-<meta itemprop="description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks.">
-
-
-<meta itemprop="datePublished" content="2018-06-19T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-06-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="356">
-
-
-
-<meta itemprop="keywords" content="git,shell,c," />
-
-    <header>
-      <h1 itemprop="headline">Week 07 Progress</h1>
       <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
-<span>2 minute read</span>
+<span>5 minute read</span>
 <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2018-06-19T00:00:00&#43;00:00">19 Jun, 2018</time>
+  Published: <time datetime="2018-05-01T06:00:00&#43;00:00">1 May, 2018</time>
 
 </p>
-    </header>
     
-    
-
-    <div itemprop="articleBody">
-      <p>Hello everyone.</p>
-
-<p>This week there was lots of progress in builtin rebase. Lots of thanks to <a href="https://github.com/dscho">Johannes Schindelin</a>,
-without him the patch wouldn&rsquo;t be in current state. Rather
-than work on emulating smaller functions from <code>git-rebase.sh</code>
-like I explained previously in my blog post. Me and <a href="https://github.com/dscho">Dscho</a> went a lot farther and implemented a super simple rebase. You can find the code <a href="https://github.com/git/git/pull/505">here</a>.
-If you&rsquo;re feeling adventurous get the code and run some rebase tasks.
-Maybe try this:</p>
-
-<pre><code class="language-shell">./git --exec-path=&quot;$PWD&quot; -c rebase.usebuiltin=true rebase HEAD^
-</code></pre>
-
-<p>Or if you want to use your terminal more maybe try this?</p>
-
-<pre><code class="language-shell">mkdir 123
-git init 123
-cd 123
-touch a1
-git add a1
-git commit -m a1 a1
-for i in 2 3 4; do touch a$i; git add a$i; git commit -m a$i a$i; done
-cd ..
-./git --exec-path=$PWD -C 123 -c rebase.usebuiltin=true rebase HEAD~
-</code></pre>
-
-<p>Did you get a message saying <code>warning: TODO</code>? Well it&rsquo;s because the <code>apply_autostash()</code> hasn&rsquo;t been implemented yet&hellip;
-Modifying this and making it run will be handled in later patch.</p>
-
-<p>Well if you try <code>echo $?</code> it returns 0 which is a proof of saying that our code works till that point i.e. until the <code>apply_autostash()</code>. Still lots of environment variables need to be set. There&rsquo;s still _a_lot_ to do as we are moving steadily towards a working builtin rebase. The full rebase as promised is very hard to reach as it requires lots and lots of configurations and coding. Time will tell how much I can complete in this GSoC time period and with every week the code is somewhat progressing towards something awesome. :-)</p>
-
-<p>There are lots of awesome things going on here which I&rsquo;ll explain in the blog post where I&rsquo;ll breakdown every functions and total internal workings of my code of builtin rebase.</p>
-
-<p>Oh and one important thing if you want to have a collaborative coding session but are waiting for some positive review to try <a href="https://code.visualstudio.com/blogs/2017/11/15/live-share">Visual Studio Live Share</a>.
-You have mine. It works nicely. Though it&rsquo;s still in preview and lots of improvements are needed, it&rsquo;s very usable and get you more productive.</p>
-
-<p>That&rsquo;s it for this week. Stay tuned.</p>
-
-    </div>
-    
-      <article>
-        <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "prertik-github-io" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      </article>
-    
-    <footer>
-      <hr>
-      <p>
-  Published
+  </header>
   
-    
-      by <span itemprop="author">Pratik Karki</span>
-    
+    <blockquote itemprop="headline">A gentle git introduction</blockquote>
   
-  <time itemprop="datePublished" datetime="2018-06-19T00:00:00&#43;00:00">
-    19 Jun, 2018
-  </time>
+  <div itemprop="description">
+    This summer of &lsquo;18, I&rsquo;ll be working in Git. Git is an insanely awesome software. I still remember the day I learned about Git via Github and instantly got hooked. Git isn&rsquo;t just an everyday software you encounter, just look at the documentation and observe closely how it works and you will understand the rock solid design. Enough with Git introduction already. There are too much posts describing Git already.
+  </div>
   
-    in <span itemprop="articleSection"><a href="/categories/git/">git</a></span>
+    <nav class="readmore"><a itemprop="url" href="/post/git-an-unexpected-journey/">Read More&nbsp;&raquo;</a></nav>
   
+  <meta itemprop="inLanguage" content="en-us">
+  <meta itemprop="datePublished" content="2018-05-01T06:00:00&#43;00:00">
+  <meta itemprop="dateModified" content="2018-05-01T06:00:00&#43;00:00">
   
-    and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a> and <a href="/tags/shell/">shell</a>
+    <meta itemprop="image" content="https://prertik.github.io/static/sanic.png">
   
-  using <span itemprop="wordCount">356</span> words.
-</p>
+</article>
 
-      
-
-
-  <aside>
-    <header>Related Content</header>
-    <ul>
-      
-        <li><a href="/post/week-06/">Week 06 Progress</a>
-        <time datetime="1M">1 minutes</time>
-      
-        <li><a href="/post/week-05/">Week 05 Progress</a>
-        <time datetime="1M">1 minutes</time>
-      
-        <li><a href="/post/week-03/">Week 03 and Week 04 Progress</a>
-        <time datetime="2M">2 minutes</time>
-      
-        <li><a href="/post/git-inside/">Git Inside® Part I: Don&#39;t Fear the Rebase</a>
-        <time datetime="10M">10 minutes</time>
-      
-    </ul>
-  </aside>
-
-
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-        <img alt="Creative Commons License" style="border-width:0"
-             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
-      </a>
-    </footer>
-  </article>
+  
 </main>
     <footer>
+  <nav>
+  <p>
+    
+      <a href="/">&laquo; Previous</a> |
+    
+    <span>Page 2 of 2</span>
+    
+  </p>
+</nav>
+
   
 
 </footer>
