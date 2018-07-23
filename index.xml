@@ -6,10 +6,21 @@
     <description>Recent content on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 11 and Week 12 merge!</title>
+      <link>https://prertik.github.io/post/week-11/</link>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-11/</guid>
+      <description>Hello everyone, How are you?
+I apologize for not updating my blog post the previous week.
+So, on week 11, if you had followed my week 10 post, you would think by this time I will have gotten all the options of the rebase. Well, my week technically started by cleaning all the options to create them as separate commits and polish them for reviewing. Why is that more important? Well, it&amp;rsquo;s because every reviewer is a human being and it&amp;rsquo;s a natural tendency to review a lot of smaller things rather than a big monolithic one.</description>
+    </item>
     
     <item>
       <title>Week 10 Progress</title>
