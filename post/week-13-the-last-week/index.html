@@ -4,9 +4,9 @@
     <meta name="generator" content="Hugo 0.46" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 07 Progress | (recur code)</title>
-    <meta name="description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks.">
+    <title>Week 13 - the last week of GSoC Work period! | (recur code)</title>
+    <meta name="description" content="Hello everyone, Sorry for the late post as you know I have been very busy lately giving finishing touches to the builtin/rebase.c. Yes, you read it right. We have a complete rebase.c, it has some nits still, as some tests particularly t5520 and t7406 are not passing but the good news is, the tests t34* are passing. Yipee!
+Regarding the status on the mailing list, after some regression tests suggested by @dscho, we found out that certain key changes need to be done to v5, so I requested the Git maintainer to hold it for some time i.">
     <meta name="keywords" content="git, shell, c">
     
     
@@ -17,17 +17,17 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
   <meta name="author" content="Pratik Karki">
 
 
-    <meta property="og:title" content="Week 07 Progress" />
-<meta property="og:description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks." />
+    <meta property="og:title" content="Week 13 - the last week of GSoC Work period!" />
+<meta property="og:description" content="Hello everyone, Sorry for the late post as you know I have been very busy lately giving finishing touches to the builtin/rebase.c. Yes, you read it right. We have a complete rebase.c, it has some nits still, as some tests particularly t5520 and t7406 are not passing but the good news is, the tests t34* are passing. Yipee!
+Regarding the status on the mailing list, after some regression tests suggested by @dscho, we found out that certain key changes need to be done to v5, so I requested the Git maintainer to hold it for some time i." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://prertik.github.io/post/week-07/" />
+<meta property="og:url" content="https://prertik.github.io/post/week-13-the-last-week/" />
 
 
 
-<meta property="article:published_time" content="2018-06-19T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2018-08-04T00:00:00&#43;00:00"/>
 
-<meta property="article:modified_time" content="2018-06-19T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-08-04T00:00:00&#43;00:00"/>
 
 
 
@@ -40,9 +40,9 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
 
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Week 07 Progress"/>
-<meta name="twitter:description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks."/>
+<meta name="twitter:title" content="Week 13 - the last week of GSoC Work period!"/>
+<meta name="twitter:description" content="Hello everyone, Sorry for the late post as you know I have been very busy lately giving finishing touches to the builtin/rebase.c. Yes, you read it right. We have a complete rebase.c, it has some nits still, as some tests particularly t5520 and t7406 are not passing but the good news is, the tests t34* are passing. Yipee!
+Regarding the status on the mailing list, after some regression tests suggested by @dscho, we found out that certain key changes need to be done to v5, so I requested the Git maintainer to hold it for some time i."/>
 
     
 
@@ -61,7 +61,7 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
     
 
     
-    <link rel="canonical" href="https://prertik.github.io/post/week-07/">
+    <link rel="canonical" href="https://prertik.github.io/post/week-13-the-last-week/">
     
     
     <link rel = "icon" sizes = "any" href ="/static/favicon.ico">
@@ -138,21 +138,21 @@ a[itemprop="url"]:hover {
     <main>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     
-<meta itemprop="name" content="Week 07 Progress">
-<meta itemprop="description" content="Hello everyone.
-This week there was lots of progress in builtin rebase. Lots of thanks to Johannes Schindelin, without him the patch wouldn&rsquo;t be in current state. Rather than work on emulating smaller functions from git-rebase.sh like I explained previously in my blog post. Me and Dscho went a lot farther and implemented a super simple rebase. You can find the code here. If you&rsquo;re feeling adventurous get the code and run some rebase tasks.">
+<meta itemprop="name" content="Week 13 - the last week of GSoC Work period!">
+<meta itemprop="description" content="Hello everyone, Sorry for the late post as you know I have been very busy lately giving finishing touches to the builtin/rebase.c. Yes, you read it right. We have a complete rebase.c, it has some nits still, as some tests particularly t5520 and t7406 are not passing but the good news is, the tests t34* are passing. Yipee!
+Regarding the status on the mailing list, after some regression tests suggested by @dscho, we found out that certain key changes need to be done to v5, so I requested the Git maintainer to hold it for some time i.">
 
 
-<meta itemprop="datePublished" content="2018-06-19T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2018-06-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="356">
+<meta itemprop="datePublished" content="2018-08-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-08-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="245">
 
 
 
 <meta itemprop="keywords" content="git,shell,c," />
 
     <header>
-      <h1 itemprop="headline">Week 07 Progress</h1>
+      <h1 itemprop="headline">Week 13 - the last week of GSoC Work period!</h1>
       <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
@@ -162,7 +162,7 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2018-06-19T00:00:00&#43;00:00">19 Jun, 2018</time>
+  Published: <time datetime="2018-08-04T00:00:00&#43;00:00">4 Aug, 2018</time>
 
 </p>
     </header>
@@ -170,42 +170,15 @@ This week there was lots of progress in builtin rebase. Lots of thanks to Johann
     
 
     <div itemprop="articleBody">
-      <p>Hello everyone.</p>
+      <p>Hello everyone, Sorry for the late post as you know I have been very busy lately giving finishing touches to the <code>builtin/rebase.c</code>. Yes, you read it right. We have a complete <code>rebase.c</code>, it has some nits still, as some tests particularly <code>t5520</code> and <code>t7406</code> are not passing but the good news is, the tests <code>t34*</code> are passing. Yipee!</p>
 
-<p>This week there was lots of progress in builtin rebase. Lots of thanks to <a href="https://github.com/dscho">Johannes Schindelin</a>,
-without him the patch wouldn&rsquo;t be in current state. Rather
-than work on emulating smaller functions from <code>git-rebase.sh</code>
-like I explained previously in my blog post. Me and <a href="https://github.com/dscho">Dscho</a> went a lot farther and implemented a super simple rebase. You can find the code <a href="https://github.com/git/git/pull/505">here</a>.
-If you&rsquo;re feeling adventurous get the code and run some rebase tasks.
-Maybe try this:</p>
+<p>Regarding the status on the mailing list, after some regression tests suggested by <a href="https://github.com/dscho">@dscho</a>, we found out that certain key changes need to be done to <a href="https://public-inbox.org/git/CAOZc8M_FJmMCEB1MkJrBRpLiFjy8OTEg_MxoNQTh5-brHxR-=A@mail.gmail.com/">v5</a>, so I requested the Git maintainer to hold it for some time i.e. not merge from <code>pu</code> to <code>next</code>. The good news is I&rsquo;m getting <code>v6</code> ready as of now.</p>
 
-<pre><code class="language-shell">./git --exec-path=&quot;$PWD&quot; -c rebase.usebuiltin=true rebase HEAD^
-</code></pre>
+<p>So, I&rsquo;ll be submitting all the commits of my branch to mailing list as soon as it is ready. As, I have stated in my previous blogs, there are lots of commits with specific changes as @dscho instructed me to do, as it will be more make easier for review process and won&rsquo;t get stuck in review cycle for long.</p>
 
-<p>Or if you want to use your terminal more maybe try this?</p>
+<p>I&rsquo;ll conclude my GSoC blog series with this status of my work.</p>
 
-<pre><code class="language-shell">mkdir 123
-git init 123
-cd 123
-touch a1
-git add a1
-git commit -m a1 a1
-for i in 2 3 4; do touch a$i; git add a$i; git commit -m a$i a$i; done
-cd ..
-./git --exec-path=$PWD -C 123 -c rebase.usebuiltin=true rebase HEAD~
-</code></pre>
-
-<p>Did you get a message saying <code>warning: TODO</code>? Well it&rsquo;s because the <code>apply_autostash()</code> hasn&rsquo;t been implemented yet&hellip;
-Modifying this and making it run will be handled in later patch.</p>
-
-<p>Well if you try <code>echo $?</code> it returns 0 which is a proof of saying that our code works till that point i.e. until the <code>apply_autostash()</code>. Still lots of environment variables need to be set. There&rsquo;s still _a_lot_ to do as we are moving steadily towards a working builtin rebase. The full rebase as promised is very hard to reach as it requires lots and lots of configurations and coding. Time will tell how much I can complete in this GSoC time period and with every week the code is somewhat progressing towards something awesome. :-)</p>
-
-<p>There are lots of awesome things going on here which I&rsquo;ll explain in the blog post where I&rsquo;ll breakdown every functions and total internal workings of my code of builtin rebase.</p>
-
-<p>Oh and one important thing if you want to have a collaborative coding session but are waiting for some positive review to try <a href="https://code.visualstudio.com/blogs/2017/11/15/live-share">Visual Studio Live Share</a>.
-You have mine. It works nicely. Though it&rsquo;s still in preview and lots of improvements are needed, it&rsquo;s very usable and get you more productive.</p>
-
-<p>That&rsquo;s it for this week. Stay tuned.</p>
+<p>And a quick reminder, a detailed part II of <a href="https://prertik.github.io/post/git-inside/">Git Inside® Part I: Don&rsquo;t Fear the Rebase</a> will be posted (after the complete GSoC period) for more detail read of my conversion from <code>git-rebase.sh</code> to <code>builtin/rebase.c</code>. I&rsquo;ll closely describe the underlyings of Git or Git Internals in that blog post. So, do keep on checking out this blog.</p>
 
     </div>
     
@@ -241,8 +214,8 @@ You have mine. It works nicely. Though it&rsquo;s still in preview and lots of i
       by <span itemprop="author">Pratik Karki</span>
     
   
-  <time itemprop="datePublished" datetime="2018-06-19T00:00:00&#43;00:00">
-    19 Jun, 2018
+  <time itemprop="datePublished" datetime="2018-08-04T00:00:00&#43;00:00">
+    4 Aug, 2018
   </time>
   
     in <span itemprop="articleSection"><a href="/categories/git/">git</a></span>
@@ -250,7 +223,7 @@ You have mine. It works nicely. Though it&rsquo;s still in preview and lots of i
   
     and tagged <a href="/tags/c/">c</a>, <a href="/tags/git/">git</a> and <a href="/tags/shell/">shell</a>
   
-  using <span itemprop="wordCount">356</span> words.
+  using <span itemprop="wordCount">245</span> words.
 </p>
 
       
@@ -260,17 +233,26 @@ You have mine. It works nicely. Though it&rsquo;s still in preview and lots of i
     <header>Related Content</header>
     <ul>
       
+        <li><a href="/post/week-11/">Week 11 and Week 12 merge!</a>
+        <time datetime="2M">2 minutes</time>
+      
+        <li><a href="/post/week-10/">Week 10 Progress</a>
+        <time datetime="1M">1 minutes</time>
+      
+        <li><a href="/post/week-09/">Week 09 Progress</a>
+        <time datetime="1M">1 minutes</time>
+      
+        <li><a href="/post/week-08/">Week 08 Progress</a>
+        <time datetime="1M">1 minutes</time>
+      
+        <li><a href="/post/week-07/">Week 07 Progress</a>
+        <time datetime="2M">2 minutes</time>
+      
         <li><a href="/post/week-06/">Week 06 Progress</a>
         <time datetime="1M">1 minutes</time>
       
         <li><a href="/post/week-05/">Week 05 Progress</a>
         <time datetime="1M">1 minutes</time>
-      
-        <li><a href="/post/week-03/">Week 03 and Week 04 Progress</a>
-        <time datetime="2M">2 minutes</time>
-      
-        <li><a href="/post/git-inside/">Git Inside® Part I: Don&#39;t Fear the Rebase</a>
-        <time datetime="10M">10 minutes</time>
       
     </ul>
   </aside>

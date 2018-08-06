@@ -6,10 +6,20 @@
     <description>Recent content on (recur code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://prertik.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Week 13 - the last week of GSoC Work period!</title>
+      <link>https://prertik.github.io/post/week-13-the-last-week/</link>
+      <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://prertik.github.io/post/week-13-the-last-week/</guid>
+      <description>Hello everyone, Sorry for the late post as you know I have been very busy lately giving finishing touches to the builtin/rebase.c. Yes, you read it right. We have a complete rebase.c, it has some nits still, as some tests particularly t5520 and t7406 are not passing but the good news is, the tests t34* are passing. Yipee!
+Regarding the status on the mailing list, after some regression tests suggested by @dscho, we found out that certain key changes need to be done to v5, so I requested the Git maintainer to hold it for some time i.</description>
+    </item>
     
     <item>
       <title>Week 11 and Week 12 merge!</title>
